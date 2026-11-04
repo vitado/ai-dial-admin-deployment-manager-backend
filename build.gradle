@@ -4,7 +4,7 @@ buildscript {
             classpath ('org.apache.commons:commons-lang3:3.18.0') {
                 because("previous versions have vulnerabilities")
             }
-            classpath ('com.fasterxml.jackson.core:jackson-core:2.21.6') {
+            classpath ('com.fasterxml.jackson.core:jackson-core:2.21.7') {
                 because("previous versions have vulnerabilities")
             }
             classpath ('io.netty:netty-codec-http2:4.2.18.Final') {
@@ -135,7 +135,7 @@ dependencies {
     // constructor-parameter-name detection, which spring-boot-starter-json used to provide before Jackson 3.
     // Held above the Boot-BOM-managed 2.21.4, which is affected by the same @JsonUnwrapped/@JsonView bypasses
     // as Jackson 3 (CVE-2026-59889, GHSA-mhm7-754m-9p8w), both patched in 2.21.5
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.6'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.21.7'
     implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310:2.21.6'
     runtimeOnly 'com.fasterxml.jackson.module:jackson-module-parameter-names:2.21.6'
     implementation 'com.github.f4b6a3:uuid-creator:6.0.0'
@@ -183,7 +183,7 @@ dependencies {
         implementation("io.grpc:grpc-netty-shaded:1.75.0") {
             because("previous versions have vulnerabilities")
         }
-        implementation ('com.fasterxml.jackson.core:jackson-core:2.21.6') {
+        implementation ('com.fasterxml.jackson.core:jackson-core:2.21.7') {
             because("transitive Jackson 2 from fabric8/MCP/jib — previous versions have vulnerabilities")
         }
         implementation("org.bouncycastle:bcprov-jdk18on:1.85") {
